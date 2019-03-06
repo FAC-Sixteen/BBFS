@@ -1,0 +1,11 @@
+nav{
+	width: 100%;
+	height: 10vh;
+	border: 1px solid black;
+}
+
+nav .navItems{
+float: right;
+}
+
+
