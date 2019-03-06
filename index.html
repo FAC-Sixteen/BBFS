@@ -14,13 +14,13 @@
             <div class="bar3"></div>
           </div>
     
-        <div id="navItems">
-          <a href="">about</a>
-          <a href="">team</a>
-          <a href="">contact us</a>
+        <div id="navItems" onclick="myFunction(this)">
+          <a href="" class="navItem">about</a>
+          <a href="" class="navItem">team</a>
+          <a href="" class="navItem">contact us</a>
         </div>
     </nav>
-    
+    <main>
     <section class="pane pane__first">
       <h1>bbfs</h1>
     </section>
@@ -33,12 +33,21 @@
 
     </section>
 
-  	
+  </main>
 
   </body>
   <script>
       function myFunction(x) {
         x.classList.toggle("change");
+        x.classList.toggle(document.getElementById('navItems').style.opacity = 1);
+        // if(document.getElementsByClassName('change')){
+        //   document.getElementById('navItems').style.opacity = 0;
+        // }
+        // else{
+        //   document.getElementById('navItems').style.opacity = 1;
+        //   console.log('')
+        // }
+
       }
       </script>
 </html>
