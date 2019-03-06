@@ -36,6 +36,7 @@ nav a{
 
 
 nav #navItems  {
+	background: orange;
 	border: 1px solid green;
 	width: 100%;
 	height: 100vh;
@@ -46,7 +47,8 @@ nav #navItems  {
 	align-items: center;
 	position: absolute;
 	left: 5000px;
-	transition: all 1200ms linear;
+	transition: 1.5s;
+	/*transition: all 1.5s linear;*/ 
 }
 
 .change .navItem {
