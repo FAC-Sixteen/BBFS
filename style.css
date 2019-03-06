@@ -45,6 +45,8 @@ nav #navItems  {
 	justify-content: center;
 	align-items: center;
 	position: absolute;
+	left: 5000px;
+	transition: all 1200ms linear;
 }
 
 .change .navItem {
