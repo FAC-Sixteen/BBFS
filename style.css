@@ -1,5 +1,6 @@
 
 .pane {
+	
     height: 100vh;
 }
 
@@ -49,13 +50,15 @@ p {
     padding: 0;
 }
 nav{
+	position: sticky;
+	top: 0;
 	width: 100%;
 	height: 8vh;
-	border: 1px solid black;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	/* border: 1px solid black; */
+	/* display: flex;
+	flex-direction: row; */
 	font-size: 1.5rem;
+	z-index: 1;
 }
 
 nav a{
@@ -63,25 +66,32 @@ nav a{
 	 color: black;
 }
 
-
-nav #logo{
+.burger {
+	right: 0;
+	margin-right: 20px;
+	margin-top: 10px;
+	position: absolute;
+}
+/* nav #logo{
 	text-decoration: none;
 	border: 1px solid red;
 	width: 40%;
 	height: 100%;
 	display: flex;
 	align-items: center;
-}
+} */
 
 
-nav #navItems {
+nav #navItems  {
 	border: 1px solid green;
-	width: 60%;
-	height: 100%;
+	width: 100%;
+	height: 100vh;
 	text-decoration: none;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
+	position: absolute;
 }
 
 /*@media only screen and (min-width: 960px){
@@ -92,3 +102,29 @@ nav #navItems {
 		font-size: 3rem;
 	}
 }*/
+
+.burger {
+	display: inline-block;
+	cursor: pointer;
+	z-index: 1;
+  }
+  
+  .bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+  }
+  
+  .change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+  }
