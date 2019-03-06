@@ -1,0 +1,15 @@
+.pane {
+    height: 100vh;
+}
+
+.pane__first {
+    background-color: green;
+}
+
+.pane__second {
+    background-color: blue;
+}
+
+.pane__third {
+    background-color: pink;
+}
