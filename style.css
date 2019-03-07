@@ -1,5 +1,13 @@
-/* Navbar */
+html, body {
+	margin: 0;
+	padding: 0;
+}
 
+/* Mobile Navbar */
+
+.desktopnav {
+	display: none;
+}
 	nav {
 		position: sticky;
 		top: 0;
@@ -17,7 +25,7 @@
 		color: #ffdcb4;
 	}
 
-	nav #navItems  {
+	.navlist  {
 		background: orange;
 		width: 100%;
 		height: 100vh;
@@ -88,24 +96,49 @@
 		position: static;
 	}
 
+	h2 {
+		font-size: 3vh;
+		position: absolute;
+		left: 15vw;
+		bottom: 25vw;
+		opacity: 0;
+		animation: opacitygrow 1s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+	}
 
+	.bulboff {
+		position: absolute;
+		left: 50%;
+		margin-left: -98px;
+		width: 100%;
+		max-width: 196px;
+		animation: shake 1s, opacityfade 1s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+	}
 
-	@keyframes typing {
-		from { width: 0 }
-		to { width: 100vw}
-	  }
-
+	.bulbon {
+		position: absolute;
+		left: 50%;
+		margin-left: -98px;
+		width: 100%;
+		max-width: 196px;
+		opacity: 0;
+		animation: shake 1s, opacitygrow 1s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+	}
 
 .pane {
 	height: 100vh;
 }
 
 .pane__first {
-	background-image: url("bulboff.png");
-	background-repeat: no-repeat;
-	/* background-attachment: fixed; */
-	background-position: center top;
-	background-color: #ffdcb4;
+	background-color: white;
+	animation: backgroundlight 1s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
 
 }
 
@@ -121,9 +154,58 @@
 		background-clip: border-box;
 }
 
-img {
-	width: 100%;
-	max-width: 196px;
+/* Keyframe animations */
+
+@keyframes shake {
+  0% { transform: translate(1x, 1px) rotate(0deg);}
+  10% { transform: translate(-1px, -2px) rotate(-1deg);}
+  20% { transform: translate(-3px, 0px) rotate(1deg);}
+  30% { transform: translate(3px, 2px) rotate(0deg);}
+  40% { transform: translate(1px, -1px) rotate(1deg);}
+  50% { transform: translate(-1px, 2px) rotate(-1deg);}
+  60% { transform: translate(-3px, 1px) rotate(0deg);}
+  70% { transform: translate(3px, 1px) rotate(-1deg);}
+  80% { transform: translate(-1px, -1px) rotate(1deg);}
+  90% { transform: translate(1px, 2px) rotate(0deg);}
+  100% { transform: translate(1px, -2px) rotate(-1deg);}
+}
+
+@keyframes opacityfade {
+	0% { opacity: 1; }
+	10% { opacity: 0.9; }
+	20% { opacity: 0.8; }
+	30% { opacity: 0.7; }
+	40% { opacity: 0.6; }
+	50% { opacity: 0.5; }
+	60% { opacity: 0.4; }
+	70% { opacity: 0.3; }
+	80% { opacity: 0.2; }
+	90% { opacity: 0.1; }
+	100% { opacity: 0; }
+}
+
+@keyframes opacitygrow {
+	0% { opacity: 0; }
+	10% { opacity: 0.1; }
+	20% { opacity: 0.2; }
+	30% { opacity: 0.3; }
+	40% { opacity: 0.4; }
+	50% { opacity: 0.5; }
+	60% { opacity: 0.6; }
+	70% { opacity: 0.7; }
+	80% { opacity: 0.8; }
+	90% { opacity: 0.9; }
+	100% { opacity: 1; }
+}
+
+@keyframes backgroundlight {
+    5%     {background-color: white;}
+    100%  {background-color: #ffdcb4;}
+}
+
+@keyframes typing {
+	from { width: 0; }
+	to { width: 100vw; }
 }
 
   /* The typewriter cursor effect */
@@ -132,6 +214,7 @@ img {
     from, to { border-color: transparent }
     50% { border-color: orange; }
   } */
+
 
 footer {
     margin: 0;
@@ -144,20 +227,8 @@ p {
 }
 
 /* Desktop mode */
-@media only screen and (min-width: 960px){
+@media only screen and (min-width: 700px){
 
-	/* Disable javascript on desktop mode */
-	.burger, .burger__bar1, .burger__bar2, .burger__bar3 {
-		display: none;
-	}
-
-	/* Make navbar come out a third of the viewport width*/
-	nav {
-		width: 30%;
-	}
-	nav #navItems  {
-		right: 0vw;
-	}
 
 	/* Shift the headings up and make them smaller */
 
@@ -173,8 +244,40 @@ p {
 		bottom: 0vh;
 	}
 
+	/* Disable mobile Navbar */
+		.mobilenav {
+			display: none;
+		}
 
-	/* Make the navbar headings smaller */
+	/* Desktop Navbar */
+	#slide {
+	  position: fixed;
+	  background: orange;
+	  top: 0;
+	  width: 300px;
+	  right:-200px;
+	  height: 100vh;
+	  transition: right 0.4s ease-in-out;
+	  -o-transition: right 0.4s ease-in-out;
+	  -ms-transition: right 0.4s ease-in-out;
+	  -moz-transition: right 0.4s ease-in-out;
+	  -webkit-transition: right 0.4s ease-in-out;
+	}
+	#toggle {
+	  position: absolute;
+	  right: 200px;
+	  padding: 10px;
+	  margin-right:20px;
+	  font-size: 2rem;
+	  color: white;
+	}
+	#slide:hover{
+	  right: 0px;
+	}
+	.navlist {
+		font-size: 20px;
+		color: white;
+	}
 
 
 }
