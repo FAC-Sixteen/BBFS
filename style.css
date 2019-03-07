@@ -1,137 +1,266 @@
-/* main{
-	position: absolute;
-	top:0;
-	width: 100%;
-} */
-nav{
-	position: sticky;
-	top: 0;
-	width: 100%;
-	/* border: 1px solid black; */
-	/* display: flex;
-	flex-direction: row; */
-	font-size: 1.5rem;
-	z-index: 1;
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
 }
 
-nav a{
-	text-decoration: none;
-	 color: black;
+
+/* Desktop Navbar */
+
+.desktopnav {
+	display: none;
+	opacity: 0;
+	animation: opacitygrow 1s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+.desktopSlide {
+  position: fixed;
+  background: orange;
+  top: 0;
+  width: 30vw;
+  right: -25vw;
+  height: 100vh;
+  transition: right 0.4s ease-in-out;
+  -o-transition: right 0.4s ease-in-out;
+  -ms-transition: right 0.4s ease-in-out;
+  -moz-transition: right 0.4s ease-in-out;
+  -webkit-transition: right 0.4s ease-in-out;
+}
+.desktopBurger{
+  position: absolute;
+  right: 25vw;
+  margin-right: 10px;
+  font-size: 3rem;
+  color: white;
 }
 
-.burger {
-	right: 0;
-	margin-right: 20px;
-	margin-top: 10px;
-	position: absolute;
+.desktopSlide:hover{
+  right: 0px;
 }
-/* nav #logo{
-	text-decoration: none;
-	border: 1px solid red;
-	width: 40%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-} */
 
-
-nav #navItems  {	
-	background: orange;
-	border: 1px solid green;
-	width: 100%;
+.desktopNavItems {
 	height: 100vh;
-	text-decoration: none;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	position: absolute;
-	left: 5000px;
-	transition: 1.5s;
-	/*transition: all 1.5s linear;*/ 
 }
 
-.change .navItem {
-	opacity: 0;
+.desktopNavLink {
+	font-size: 10vh;
+	text-decoration: none;
 }
 
-/*@media only screen and (min-width: 960px){
-	nav .navItems {
+/* Mobile Navbar */
+
+	nav {
+		position: sticky;
+		top: 0;
+		width: 100%;
+		/* border: 1px solid black; */
+		/* display: flex;
+		flex-direction: row; */
 		font-size: 1.5rem;
+		z-index: 1;
 	}
-	nav #logo {
-		font-size: 3rem;
+
+	nav a {
+		text-decoration: none;
+		font-size: 17vw;
+		color: #ffdcb4;
 	}
-}*/
 
-.burger {
-	display: inline-block;
-	cursor: pointer;
-	z-index: 1;
-  }
-  
-  .burger__bar1, .burger__bar2, .burger__bar3{
-	width: 35px;
-	height: 5px;
-	background-color: #333;
-	margin: 6px 0;
-	transition: 0.4s;
-  }
-  
-  .change .burger__bar1 {
-	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-	transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  
-  .change .burger__bar2 {opacity: 0;}
-  
-  .change .burger__bar3 {
-	-webkit-transform: rotate(45deg) translate(-8px, -8px);
-	transform: rotate(45deg) translate(-8px, -8px);
-  }
+	nav #navItems  {
+		background: orange;
+		width: 100%;
+		height: 100vh;
+		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		left: 5000px;
+		transition: 1.5s;
+		/*transition: all 1.5s linear;*/
+	}
+
+	.change .navItem {
+		opacity: 0;
+	}
+
+	.burger {
+		height: 100vh;
+		left: 0;
+		margin-left: 20px;
+		margin-top: 10px;
+		position: absolute;
+		display: inline-block;
+		cursor: pointer;
+		z-index: 1;
+	  }
+
+	  .burger__bar1, .burger__bar2, .burger__bar3{
+		width: 35px;
+		height: 5px;
+		background-color: orange;
+		margin: 6px 0;
+		transition: 0.4s;
+	  }
+
+	  .change .burger__bar1 {
+		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+		transform: rotate(-45deg) translate(-9px, 6px);
+		background-color: black;
+	  }
+
+	  .change .burger__bar2 {opacity: 0;}
+
+	  .change .burger__bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px, -8px);
+		transform: rotate(45deg) translate(-8px, -8px);
+		background-color: black;
+	  }
 
 
+/* Web Layout */
+
+	h1 {
+		margin: 0 auto;
+		padding: 60vh 0vh 0vh 0vh;
+		font-size: 30vw;
+		height: 100vh;
+		overflow: hidden;
+		border-right: 5vw solid orange; /* The typwriter cursor */
+		white-space: nowrap; /* Keeps the content on a single line */
+		margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+		letter-spacing: .10em; /* Adjust as needed */
+		animation:
+		typing 1.5s steps(20, end),
+		blink-caret 0.5s step-end infinite;
+		position: static;
+	}
+
+	h2 {
+		font-size: 3vh;
+		position: absolute;
+		left: 15vw;
+		bottom: 25vw;
+		opacity: 0;
+		animation: opacitygrow 1s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+	}
+
+	.bulboff {
+		position: absolute;
+		left: 50%;
+		margin-left: -98px;
+		width: 100%;
+		max-width: 196px;
+		animation: shake 1s, opacityfade 1s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+	}
+
+	.bulbon {
+		position: absolute;
+		left: 50%;
+		margin-left: -98px;
+		width: 100%;
+		max-width: 196px;
+		opacity: 0;
+		animation: shake 1s, opacitygrow 1s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+	}
 
 .pane {
-	
-    height: 100vh;
+	height: 100vh;
 }
 
 .pane__first {
-    background-color: #ffdcb4;
+	background-color: white;
+	animation: backgroundlight 1s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+
 }
 
 .pane__second {
     background-color: blue;
+		border-right: 5vw solid orange;
+		background-clip: border-box;
 }
 
 .pane__third {
     background-color: pink;
+		border-right: 5vw solid orange;
+		background-clip: border-box;
 }
 
-h1 {
-    font-size: 30vw;
-    height: 100vh;
-    overflow: hidden;
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-    typing 1.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+/* Keyframe animations */
+
+@keyframes shake {
+  0% { transform: translate(1x, 1px) rotate(0deg);}
+  10% { transform: translate(-1px, -2px) rotate(-1deg);}
+  20% { transform: translate(-3px, 0px) rotate(1deg);}
+  30% { transform: translate(3px, 2px) rotate(0deg);}
+  40% { transform: translate(1px, -1px) rotate(1deg);}
+  50% { transform: translate(-1px, 2px) rotate(-1deg);}
+  60% { transform: translate(-3px, 1px) rotate(0deg);}
+  70% { transform: translate(3px, 1px) rotate(-1deg);}
+  80% { transform: translate(-1px, -1px) rotate(1deg);}
+  90% { transform: translate(1px, 2px) rotate(0deg);}
+  100% { transform: translate(1px, -2px) rotate(-1deg);}
+}
+
+@keyframes opacityfade {
+	0% { opacity: 1; }
+	10% { opacity: 0.9; }
+	20% { opacity: 0.8; }
+	30% { opacity: 0.7; }
+	40% { opacity: 0.6; }
+	50% { opacity: 0.5; }
+	60% { opacity: 0.4; }
+	70% { opacity: 0.3; }
+	80% { opacity: 0.2; }
+	90% { opacity: 0.1; }
+	100% { opacity: 0; }
+}
+
+@keyframes opacitygrow {
+	0% { opacity: 0; }
+	10% { opacity: 0.1; }
+	20% { opacity: 0.2; }
+	30% { opacity: 0.3; }
+	40% { opacity: 0.4; }
+	50% { opacity: 0.5; }
+	60% { opacity: 0.6; }
+	70% { opacity: 0.7; }
+	80% { opacity: 0.8; }
+	90% { opacity: 0.9; }
+	100% { opacity: 1; }
+}
+
+@keyframes backgroundlight {
+    5%     {background-color: white;}
+    100%  {background-color: #ffdcb4;}
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100vw}
-  }
-  
+	from { width: 0; }
+	to { width: 100vw; }
+}
+
   /* The typewriter cursor effect */
+
   /* @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: orange; }
   } */
+
 
 footer {
     margin: 0;
@@ -141,4 +270,35 @@ footer {
 p {
     margin: 0;
     padding: 0;
+}
+
+/* Desktop mode */
+@media only screen and (min-width: 700px){
+
+	/* Shift the headings up and make them smaller */
+
+	h1 {
+		padding: 50vh 0vh;
+		font-size: 15vw;
+	}
+
+	h2 {
+		font-size: 4vw;
+		position: absolute;
+		left: 10vh;
+		bottom: 0vh;
+	}
+
+	/* Disable mobile Navbar */
+		.mobilenav {
+			display: none;
+		}
+
+	/* Desktop Navbar */
+		.desktopnav {
+			display: block;
+		}
+
+
+
 }
