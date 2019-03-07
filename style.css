@@ -189,9 +189,8 @@ html, body {
 }
 
 .pane__second {
-    background-color: blue;
-		border-right: 5vw solid orange;
-		background-clip: border-box;
+
+    background-color: #3b5f33;
 }
 
 .pane__third {
@@ -272,6 +271,149 @@ p {
     padding: 0;
 }
 
+.scroll-wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	width: 99vw;
+	height: 100vh;
+	scroll-behavior: smooth;
+  .profile {
+    flex: 0 0 auto;
+	}
+}
+
+/* .scroll-wrapper::-webkit-scrollbar {
+  display: none;
+} */
+
+.scroll-wrapper::-webkit-scrollbar {
+	width: 1em;
+	height: 3vh;
+}
+.scroll-wrapper::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.scroll-wrapper::-webkit-scrollbar-thumb {
+background-color: orange;
+outline: 1px solid slategrey;
+}
+
+.profile {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+	display: flex;
+}
+
+@media screen and (max-width: 600px){
+	.profile {
+			flex-flow: column;
+			width: 100vw;
+	}
+}
+
+.photo {
+	height: 100vh;
+  width: 50vw;
+  margin: 0;
+	background-color: #ffdcb4;
+}
+
+.photo:hover .photo-flip {
+	transform: rotateY(180deg);
+}
+
+.front-flip, .back-flip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front-flip {
+  /* background-color: #bbb; */
+  color: black;
+  z-index: 2;
+}
+
+.back-flip {
+  background-color: #183150;
+  color: white;
+  transform: rotateY(180deg);
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.bio {
+	height: 100vh;
+  width: 50vw;
+  margin: 0;
+	background-color: #183150;
+	color: white;
+  font-size: 10vw;
+}
+
+#arrow {
+	top: 100vh;
+	/* height: 100vh; */
+	position: absolute;
+	/* z-index: 1; */
+	color: #ffdcb4;
+	font-size: 20vw;
+	background-color: green;
+}
+
+#arrow-symbol {
+	opacity: 0.5;
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#freddie {
+	background-image: url("https://avatars2.githubusercontent.com/u/40991816?s=400&v=4");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#burhan {
+	background-image: url("https://avatars3.githubusercontent.com/u/42354400?s=400&v=4");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#four-photos {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.one-photo {
+	margin: 0;
+	vertical-align: middle;
+	width: 100%;
+	height: 90%;
+}
+
+.photo-flip{
+	position: relative;
+	width: 100%;
+	height:100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+}
+
 /* Desktop mode */
 @media only screen and (min-width: 700px){
 
@@ -298,7 +440,4 @@ p {
 		.desktopnav {
 			display: block;
 		}
-
-
-
 }
