@@ -170,20 +170,24 @@ form input{
 	height: 3vh;
 	background: transparent;
 	border: transparent;
-	border-bottom: 1px  solid black;
+	border-bottom: 1px  dashed black;
 	color: #ffdcb4; 
 }
 
+form input:active, form input:focus{
+	outline: none;
+	border-bottom: 1px  dashed #ffdcb4;
+}
 
 textarea{
-	width: 80%;
 	background: transparent;
+	width: 80%;
+	color: #ffdcb4;
+	border-color: black;
 	border-radius: 5%;
 	resize: none;
 	margin-bottom: 50px;
 }
-
-
 
 #submitButton{
 	background-color: #ffdcb4;
@@ -204,9 +208,6 @@ textarea{
 	border: solid darkorange 2px;
   	border-color: darkorange;
 }
-
-
-
 
 
 
