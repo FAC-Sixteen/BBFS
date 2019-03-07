@@ -151,17 +151,11 @@ p {
 
 /*form*/
 
-
 fieldset{
 	width:80%;
 	height: 90%;
 	margin: 0 auto;
 }
-
-/*.formContainer{
-	margin: auto;
-
-}*/
 
 .formCointainer__head{
 	line-height: 1.5;
@@ -191,12 +185,24 @@ textarea{
 
 
 
-.formContainer #submitButton{
-	background-color: transparent;
+#submitButton{
+	background-color: #ffdcb4;
+	color: #3b5f33;
+	font-weight: bolder;
+	font-size: 1.5vh;
 	border-color: #ffdcb4;
 	display: block;
 	margin: auto;
-	height: 20px;
+	padding: 15px 32px;
+}
+
+#submitButton:focus {
+  outline: none;
+}
+
+#submitButton:active{
+	border: solid darkorange 2px;
+  	border-color: darkorange;
 }
 
 
