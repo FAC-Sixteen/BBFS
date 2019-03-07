@@ -4,11 +4,55 @@ html, body {
 	overflow-x: hidden;
 }
 
-/* Mobile Navbar */
+
+/* Desktop Navbar */
 
 .desktopnav {
 	display: none;
+	opacity: 0;
+	animation: opacitygrow 1s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
 }
+.desktopSlide {
+  position: fixed;
+  background: orange;
+  top: 0;
+  width: 30vw;
+  right: -25vw;
+  height: 100vh;
+  transition: right 0.4s ease-in-out;
+  -o-transition: right 0.4s ease-in-out;
+  -ms-transition: right 0.4s ease-in-out;
+  -moz-transition: right 0.4s ease-in-out;
+  -webkit-transition: right 0.4s ease-in-out;
+}
+.desktopBurger{
+  position: absolute;
+  right: 25vw;
+  margin-right: 10px;
+  font-size: 3rem;
+  color: white;
+}
+
+.desktopSlide:hover{
+  right: 0px;
+}
+
+.desktopNavItems {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.desktopNavLink {
+	font-size: 10vh;
+	text-decoration: none;
+}
+
+/* Mobile Navbar */
 
 	nav {
 		position: sticky;
@@ -231,7 +275,6 @@ p {
 /* Desktop mode */
 @media only screen and (min-width: 700px){
 
-
 	/* Shift the headings up and make them smaller */
 
 	h1 {
@@ -252,34 +295,10 @@ p {
 		}
 
 	/* Desktop Navbar */
-	#slide {
-	  position: fixed;
-	  background: orange;
-	  top: 0;
-	  width: 300px;
-	  right:-200px;
-	  height: 100vh;
-	  transition: right 0.4s ease-in-out;
-	  -o-transition: right 0.4s ease-in-out;
-	  -ms-transition: right 0.4s ease-in-out;
-	  -moz-transition: right 0.4s ease-in-out;
-	  -webkit-transition: right 0.4s ease-in-out;
-	}
-	#toggle {
-	  position: absolute;
-	  right: 200px;
-	  padding: 10px;
-	  margin-right:20px;
-	  font-size: 2rem;
-	  color: white;
-	}
-	#slide:hover{
-	  right: 0px;
-	}
-	nav #navlist {
-		font-size: 20px;
-		color: white;
-	}
+		.desktopnav {
+			display: block;
+		}
+
 
 
 }
