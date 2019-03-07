@@ -31,7 +31,7 @@ html, body {
   position: absolute;
   right: 25vw;
   margin-right: 10px;
-  font-size: 3rem;
+  font-size: 3vw;
   color: white;
 }
 
@@ -45,6 +45,7 @@ html, body {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	margin-left: 10vw;
 }
 
 .desktopNavLink {
@@ -139,10 +140,10 @@ html, body {
 		animation:
 		typing 1.5s steps(20, end),
 		blink-caret 0.5s step-end infinite;
-		position: static;
+		position: relative;
 	}
 
-	h2 {
+	#spark {
 		font-size: 3vh;
 		position: absolute;
 		left: 15vw;
@@ -185,6 +186,7 @@ html, body {
 	animation: backgroundlight 1s;
 	animation-delay: 2s;
 	animation-fill-mode: forwards;
+	position: relative;
 
 }
 
@@ -194,10 +196,14 @@ html, body {
 }
 
 .pane__third {
-    background-color: pink;
-		border-right: 5vw solid orange;
-		background-clip: border-box;
-}
+	background-color: #3b5f33;
+    color: #ffdcb4;
+    display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 95vw;
+  }
+
 
 /* Keyframe animations */
 
@@ -270,6 +276,75 @@ p {
     margin: 0;
     padding: 0;
 }
+
+
+
+/*form*/
+
+fieldset{
+	width:80%;
+	height: 90%;
+	margin: 0 auto;
+	margin-right: 5vw;
+}
+
+
+#contactUs{
+	font-size: 3vh;
+}
+
+.formCointainer__head{
+	line-height: 1.5;
+	border-bottom: 1px solid #ffdcb4;
+	padding-bottom: 10px;
+	width: 80%;
+}
+
+
+form input{
+	width: 80%;
+	height: 3vh;
+	background: transparent;
+	border: transparent;
+	border-bottom: 1px  dashed black;
+	color: #ffdcb4; 
+}
+
+form input:active, form input:focus{
+	outline: none;
+	border-bottom: 1px  dashed #ffdcb4;
+}
+
+textarea{
+	background: transparent;
+	width: 80%;
+	color: #ffdcb4;
+	border-color: black;
+	border-radius: 5%;
+	resize: none;
+	margin-bottom: 50px;
+}
+
+#submitButton{
+	background-color: #ffdcb4;
+	color: #3b5f33;
+	font-weight: bolder;
+	font-size: 1.5vh;
+	border-color: #ffdcb4;
+	display: block;
+	margin: auto;
+	padding: 15px 32px;
+}
+
+#submitButton:focus {
+  outline: none;
+}
+
+#submitButton:active{
+	border: solid darkorange 2px;
+  	border-color: darkorange;
+}
+
 
 .scroll-wrapper {
   margin: 0;
@@ -427,7 +502,7 @@ outline: 1px solid slategrey;
 		font-size: 15vw;
 	}
 
-	h2 {
+	#spark {
 		font-size: 4vw;
 		position: absolute;
 		left: 10vh;
