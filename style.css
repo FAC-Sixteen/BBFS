@@ -1,9 +1,103 @@
+/* Navbar */
+
+	nav {
+		position: sticky;
+		top: 0;
+		width: 100%;
+		/* border: 1px solid black; */
+		/* display: flex;
+		flex-direction: row; */
+		font-size: 1.5rem;
+		z-index: 1;
+	}
+
+	nav a {
+		text-decoration: none;
+		font-size: 17vw;
+		color: #ffdcb4;
+	}
+
+	nav #navItems  {
+		background: orange;
+		width: 100%;
+		height: 100vh;
+		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		left: 5000px;
+		transition: 1.5s;
+		/*transition: all 1.5s linear;*/
+	}
+
+	.change .navItem {
+		opacity: 0;
+	}
+
+	.burger {
+		height: 100vh;
+		left: 0;
+		margin-left: 20px;
+		margin-top: 10px;
+		position: absolute;
+		display: inline-block;
+		cursor: pointer;
+		z-index: 1;
+	  }
+
+	  .burger__bar1, .burger__bar2, .burger__bar3{
+		width: 35px;
+		height: 5px;
+		background-color: orange;
+		margin: 6px 0;
+		transition: 0.4s;
+	  }
+
+	  .change .burger__bar1 {
+		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+		transform: rotate(-45deg) translate(-9px, 6px);
+		background-color: black;
+	  }
+
+	  .change .burger__bar2 {opacity: 0;}
+
+	  .change .burger__bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px, -8px);
+		transform: rotate(45deg) translate(-8px, -8px);
+		background-color: black;
+	  }
+
+
+/* Web Layout */
+
+	h1 {
+		margin: 0 auto;
+		padding: 60vh 0vh 0vh 0vh;
+		font-size: 30vw;
+		height: 100vh;
+		overflow: hidden;
+		border-right: 5vw solid orange; /* The typwriter cursor */
+		white-space: nowrap; /* Keeps the content on a single line */
+		margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+		letter-spacing: .10em; /* Adjust as needed */
+		animation:
+		typing 1.5s steps(20, end),
+		blink-caret 0.5s step-end infinite;
+		position: static;
+	}
+
+
+
+	@keyframes typing {
+		from { width: 0 }
+		to { width: 100vw}
+	  }
+
 
 .pane {
 	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
 
 .pane__first {
@@ -17,15 +111,14 @@
 
 .pane__second {
     background-color: blue;
+		border-right: 5vw solid orange;
+		background-clip: border-box;
 }
 
 .pane__third {
     background-color: pink;
-}
-
-h1 {
-	margin: 0 auto;
-	font-size: 8em;
+		border-right: 5vw solid orange;
+		background-clip: border-box;
 }
 
 img {
@@ -33,11 +126,8 @@ img {
 	max-width: 196px;
 }
 
-.bulb-on {
-	display: none;
-}
-
   /* The typewriter cursor effect */
+
   /* @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: orange; }
@@ -52,70 +142,39 @@ p {
     margin: 0;
     padding: 0;
 }
-nav{
-	width: 100%;
-	height: 8vh;
-	border: 1px solid black;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	font-size: 1.5rem;
-}
-
-nav a{
-	text-decoration: none;
-	 color: black;
-}
-
-
-nav #logo{
-	text-decoration: none;
-	border: 1px solid red;
-	width: 40%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-}
-
-
-nav #navItems {
-	border: 1px solid green;
-	width: 60%;
-	height: 100%;
-	text-decoration: none;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
 
 /* Desktop mode */
 @media only screen and (min-width: 960px){
-	/* .pane__first {
-		align-items: center;
-		justify-content: center;
-	} */
+
+	/* Disable javascript on desktop mode */
+	.burger, .burger__bar1, .burger__bar2, .burger__bar3 {
+		display: none;
+	}
+
+	/* Make navbar come out a third of the viewport width*/
+	nav {
+		width: 30%;
+	}
+	nav #navItems  {
+		right: 0vw;
+	}
+
+	/* Shift the headings up and make them smaller */
+
 	h1 {
-		padding: 10vh 0;
-		font-size: 30vw;
-		height: 100vh;
-		overflow: hidden;
-		border-right: .15em solid orange; /* The typwriter cursor */
-		white-space: nowrap; /* Keeps the content on a single line */
-		margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-		letter-spacing: .15em; /* Adjust as needed */
-		animation:
-		typing 1.5s steps(20, end),
-		blink-caret .75s step-end infinite;
+		padding: 50vh 0vh;
+		font-size: 15vw;
 	}
-	@keyframes typing {
-		from { width: 0 }
-		to { width: 100vw}
-	  }
-	nav .navItems {
-		font-size: 1.5rem;
+
+	h2 {
+		font-size: 4vw;
+		position: absolute;
+		left: 10vh;
+		bottom: 0vh;
 	}
-	nav #logo {
-		font-size: 3rem;
-	}
+
+
+	/* Make the navbar headings smaller */
+
+
 }
