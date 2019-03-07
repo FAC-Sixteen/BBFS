@@ -154,7 +154,7 @@ p {
 
 fieldset{
 	width:80%;
-	height: 80%;
+	height: 90%;
 	margin: 0 auto;
 }
 
@@ -167,11 +167,12 @@ fieldset{
 	line-height: 1.5;
 	border-bottom: 1px solid #ffdcb4;
 	padding-bottom: 10px;
+	width: 80%;
 }
 
 
 form input{
-	width: 100%;
+	width: 80%;
 	height: 3vh;
 	background: transparent;
 	border: transparent;
@@ -181,10 +182,21 @@ form input{
 
 
 textarea{
-	width: 100%;
+	width: 80%;
 	background: transparent;
 	border-radius: 5%;
 	resize: none;
+	margin-bottom: 50px;
+}
+
+
+
+.formContainer #submitButton{
+	background-color: transparent;
+	border-color: #ffdcb4;
+	display: block;
+	margin: auto;
+	height: 20px;
 }
 
 
