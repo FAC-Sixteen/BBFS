@@ -2,7 +2,7 @@ let changeClass = false;//<<<false because change class is not set to the elemen
 
 // Menu and contents
 let burgerMenu = document.querySelector('.burger');
-let navlist = document.getElementById('navlist');
+let navItems = document.getElementById('navItems');
 
 
 // functions
@@ -12,13 +12,13 @@ let myFunction = (x) => {
 	if(!changeClass){//<<< this is when menu expands
 		changeClass = true;
 		x.currentTarget.classList.toggle("change");
-		navlist.style.left = '0';
+		navItems.style.left = '0';
 	}
 
 	else{
 		changeClass = false;
 		x.currentTarget.classList.toggle("change");
-		navlist.style.left = '5000px';
+		navItems.style.left = '5000px';
 	}
 }
 
