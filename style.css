@@ -1,108 +1,198 @@
-/* main{
-	position: absolute;
-	top:0;
-	width: 100%;
-} */
-nav{
-	position: sticky;
-	top: 0;
-	width: 100%;
-	/* border: 1px solid black; */
-	/* display: flex;
-	flex-direction: row; */
-	font-size: 1.5rem;
-	z-index: 1;
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
 }
 
-nav a{
-	text-decoration: none;
-	 color: black;
+
+/* Desktop Navbar */
+
+.desktopnav {
+	display: none;
+	opacity: 0;
+	animation: opacitygrow 1s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+.desktopSlide {
+  position: fixed;
+  background: orange;
+  top: 0;
+  width: 30vw;
+  right: -25vw;
+  height: 100vh;
+  transition: right 0.4s ease-in-out;
+  -o-transition: right 0.4s ease-in-out;
+  -ms-transition: right 0.4s ease-in-out;
+  -moz-transition: right 0.4s ease-in-out;
+  -webkit-transition: right 0.4s ease-in-out;
+}
+.desktopBurger{
+  position: absolute;
+  right: 25vw;
+  margin-right: 10px;
+  font-size: 3vw;
+  color: white;
 }
 
-.burger {
-	right: 0;
-	margin-right: 20px;
-	margin-top: 10px;
-	position: absolute;
+.desktopSlide:hover{
+  right: 0px;
 }
-/* nav #logo{
-	text-decoration: none;
-	border: 1px solid red;
-	width: 40%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-} */
 
-
-nav #navItems  {	
-	background: orange;
-	border: 1px solid green;
-	width: 100%;
+.desktopNavItems {
 	height: 100vh;
-	text-decoration: none;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	position: absolute;
-	left: 5000px;
-	transition: 1.5s;
-	/*transition: all 1.5s linear;*/ 
+	margin-left: 10vw;
 }
 
-.change .navItem {
-	opacity: 0;
+.desktopNavLink {
+	font-size: 10vh;
+	text-decoration: none;
 }
 
-/*@media only screen and (min-width: 960px){
-	nav .navItems {
+/* Mobile Navbar */
+
+	nav {
+		position: sticky;
+		top: 0;
+		width: 100%;
+		/* border: 1px solid black; */
+		/* display: flex;
+		flex-direction: row; */
 		font-size: 1.5rem;
+		z-index: 1;
 	}
-	nav #logo {
-		font-size: 3rem;
+
+	nav a {
+		text-decoration: none;
+		font-size: 17vw;
+		color: #ffdcb4;
 	}
-}*/
 
-.burger {
-	display: inline-block;
-	cursor: pointer;
-	z-index: 1;
-  }
-  
-  .burger__bar1, .burger__bar2, .burger__bar3{
-	width: 35px;
-	height: 5px;
-	background-color: #333;
-	margin: 6px 0;
-	transition: 0.4s;
-  }
-  
-  .change .burger__bar1 {
-	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-	transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  
-  .change .burger__bar2 {opacity: 0;}
-  
-  .change .burger__bar3 {
-	-webkit-transform: rotate(45deg) translate(-8px, -8px);
-	transform: rotate(45deg) translate(-8px, -8px);
-  }
+	nav #navItems  {
+		background: orange;
+		width: 100%;
+		height: 100vh;
+		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		left: 5000px;
+		transition: 1.5s;
+		/*transition: all 1.5s linear;*/
+	}
+
+	.change .navItem {
+		opacity: 0;
+	}
+
+	.burger {
+		height: 100vh;
+		left: 0;
+		margin-left: 20px;
+		margin-top: 10px;
+		position: absolute;
+		display: inline-block;
+		cursor: pointer;
+		z-index: 1;
+	  }
+
+	  .burger__bar1, .burger__bar2, .burger__bar3{
+		width: 35px;
+		height: 5px;
+		background-color: orange;
+		margin: 6px 0;
+		transition: 0.4s;
+	  }
+
+	  .change .burger__bar1 {
+		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+		transform: rotate(-45deg) translate(-9px, 6px);
+		background-color: black;
+	  }
+
+	  .change .burger__bar2 {opacity: 0;}
+
+	  .change .burger__bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px, -8px);
+		transform: rotate(45deg) translate(-8px, -8px);
+		background-color: black;
+	  }
 
 
+/* Web Layout */
+
+	h1 {
+		margin: 0 auto;
+		padding: 60vh 0vh 0vh 0vh;
+		font-size: 30vw;
+		height: 100vh;
+		overflow: hidden;
+		border-right: 5vw solid orange; /* The typwriter cursor */
+		white-space: nowrap; /* Keeps the content on a single line */
+		margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+		letter-spacing: .10em; /* Adjust as needed */
+		animation:
+		typing 1.5s steps(20, end),
+		blink-caret 0.5s step-end infinite;
+		position: relative;
+	}
+
+	#spark {
+		font-size: 3vh;
+		position: absolute;
+		left: 15vw;
+		bottom: 25vw;
+		opacity: 0;
+		animation: opacitygrow 1s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+	}
+
+	.bulboff {
+		position: absolute;
+		left: 50%;
+		margin-left: -98px;
+		width: 100%;
+		max-width: 196px;
+		animation: shake 1s, opacityfade 1s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+	}
+
+	.bulbon {
+		position: absolute;
+		left: 50%;
+		margin-left: -98px;
+		width: 100%;
+		max-width: 196px;
+		opacity: 0;
+		animation: shake 1s, opacitygrow 1s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+	}
 
 .pane {
-	
-    height: 100vh;
+	height: 100vh;
 }
 
 .pane__first {
-    background-color: #ffdcb4;
+	background-color: white;
+	animation: backgroundlight 1s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+	position: relative;
+
 }
 
 .pane__second {
-    background-color: blue;
+
+    background-color: #3b5f33;
 }
 
 .pane__third {
@@ -111,31 +201,71 @@ nav #navItems  {
     display: flex;
   	align-items: center;
   	justify-content: center;
+  	width: 95vw;
+  }
+
+
+/* Keyframe animations */
+
+@keyframes shake {
+  0% { transform: translate(1x, 1px) rotate(0deg);}
+  10% { transform: translate(-1px, -2px) rotate(-1deg);}
+  20% { transform: translate(-3px, 0px) rotate(1deg);}
+  30% { transform: translate(3px, 2px) rotate(0deg);}
+  40% { transform: translate(1px, -1px) rotate(1deg);}
+  50% { transform: translate(-1px, 2px) rotate(-1deg);}
+  60% { transform: translate(-3px, 1px) rotate(0deg);}
+  70% { transform: translate(3px, 1px) rotate(-1deg);}
+  80% { transform: translate(-1px, -1px) rotate(1deg);}
+  90% { transform: translate(1px, 2px) rotate(0deg);}
+  100% { transform: translate(1px, -2px) rotate(-1deg);}
 }
 
-h1 {
-    font-size: 30vw;
-    height: 100vh;
-    overflow: hidden;
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-    typing 1.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+@keyframes opacityfade {
+	0% { opacity: 1; }
+	10% { opacity: 0.9; }
+	20% { opacity: 0.8; }
+	30% { opacity: 0.7; }
+	40% { opacity: 0.6; }
+	50% { opacity: 0.5; }
+	60% { opacity: 0.4; }
+	70% { opacity: 0.3; }
+	80% { opacity: 0.2; }
+	90% { opacity: 0.1; }
+	100% { opacity: 0; }
+}
+
+@keyframes opacitygrow {
+	0% { opacity: 0; }
+	10% { opacity: 0.1; }
+	20% { opacity: 0.2; }
+	30% { opacity: 0.3; }
+	40% { opacity: 0.4; }
+	50% { opacity: 0.5; }
+	60% { opacity: 0.6; }
+	70% { opacity: 0.7; }
+	80% { opacity: 0.8; }
+	90% { opacity: 0.9; }
+	100% { opacity: 1; }
+}
+
+@keyframes backgroundlight {
+    5%     {background-color: white;}
+    100%  {background-color: #ffdcb4;}
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100vw}
-  }
-  
+	from { width: 0; }
+	to { width: 100vw; }
+}
+
   /* The typewriter cursor effect */
+
   /* @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: orange; }
   } */
+
 
 footer {
     margin: 0;
@@ -155,6 +285,12 @@ fieldset{
 	width:80%;
 	height: 90%;
 	margin: 0 auto;
+	margin-right: 5vw;
+}
+
+
+#contactUs{
+	font-size: 3vh;
 }
 
 .formCointainer__head{
@@ -210,10 +346,173 @@ textarea{
 }
 
 
+.scroll-wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	width: 99vw;
+	height: 100vh;
+	scroll-behavior: smooth;
+  .profile {
+    flex: 0 0 auto;
+	}
+}
 
+/* .scroll-wrapper::-webkit-scrollbar {
+  display: none;
+} */
 
+.scroll-wrapper::-webkit-scrollbar {
+	width: 1em;
+	height: 3vh;
+}
+.scroll-wrapper::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.scroll-wrapper::-webkit-scrollbar-thumb {
+background-color: orange;
+outline: 1px solid slategrey;
+}
 
+.profile {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 
+	display: flex;
+}
 
+@media screen and (max-width: 600px){
+	.profile {
+			flex-flow: column;
+			width: 100vw;
+	}
+}
 
+.photo {
+	height: 100vh;
+  width: 50vw;
+  margin: 0;
+	background-color: #ffdcb4;
+}
 
+.photo:hover .photo-flip {
+	transform: rotateY(180deg);
+}
+
+.front-flip, .back-flip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front-flip {
+  /* background-color: #bbb; */
+  color: black;
+  z-index: 2;
+}
+
+.back-flip {
+  background-color: #183150;
+  color: white;
+  transform: rotateY(180deg);
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.bio {
+	height: 100vh;
+  width: 50vw;
+  margin: 0;
+	background-color: #183150;
+	color: white;
+  font-size: 10vw;
+}
+
+#arrow {
+	top: 100vh;
+	/* height: 100vh; */
+	position: absolute;
+	/* z-index: 1; */
+	color: #ffdcb4;
+	font-size: 20vw;
+	background-color: green;
+}
+
+#arrow-symbol {
+	opacity: 0.5;
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#freddie {
+	background-image: url("https://avatars2.githubusercontent.com/u/40991816?s=400&v=4");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#burhan {
+	background-image: url("https://avatars3.githubusercontent.com/u/42354400?s=400&v=4");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#four-photos {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.one-photo {
+	margin: 0;
+	vertical-align: middle;
+	width: 100%;
+	height: 90%;
+}
+
+.photo-flip{
+	position: relative;
+	width: 100%;
+	height:100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+}
+
+/* Desktop mode */
+@media only screen and (min-width: 700px){
+
+	/* Shift the headings up and make them smaller */
+
+	h1 {
+		padding: 50vh 0vh;
+		font-size: 15vw;
+	}
+
+	#spark {
+		font-size: 4vw;
+		position: absolute;
+		left: 10vh;
+		bottom: 0vh;
+	}
+
+	/* Disable mobile Navbar */
+		.mobilenav {
+			display: none;
+		}
+
+	/* Desktop Navbar */
+		.desktopnav {
+			display: block;
+		}
+}
