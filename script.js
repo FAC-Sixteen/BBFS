@@ -27,3 +27,13 @@ let myFunction = (x) =>{
 
 // eventListeners
 burgerMenu.addEventListener('click', myFunction);
+
+// let slideContainer = document.getElementById('container')
+// let arrowButton = document.getElementById('arrow-symbol')
+// let viewport = 100
+
+// let functionSlide = function(){
+// 	slideContainer.style.left = '100px'
+
+// arrowButton.addEventListener('click', functionSlide)
+
