@@ -190,7 +190,7 @@ html, body {
 
 .pane__second {
 
-    background-color: #3b5f33;
+    background-color: #ffdcb4;
 }
 
 .pane__third {
@@ -310,11 +310,13 @@ outline: 1px solid slategrey;
 	display: flex;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
 	.profile {
-			flex-flow: column;
-			width: 100vw;
+		display: grid;
+		grid-template-rows: 50vh;
 	}
+
+	.four
 }
 
 .photo {
@@ -343,7 +345,8 @@ outline: 1px solid slategrey;
 
 .back-flip {
   background-color: #183150;
-  color: white;
+	color: white;
+	font-size: 5em;
   transform: rotateY(180deg);
 	z-index: 1;
 	display: flex;
@@ -382,13 +385,13 @@ outline: 1px solid slategrey;
 }
 
 #freddie {
-	background-image: url("https://avatars2.githubusercontent.com/u/40991816?s=400&v=4");
+
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #burhan {
-	background-image: url("https://avatars3.githubusercontent.com/u/42354400?s=400&v=4");
+	
 	background-repeat: no-repeat;
 	background-position: center;
 }
