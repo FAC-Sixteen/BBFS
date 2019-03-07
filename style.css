@@ -1,5 +1,99 @@
+/* main{
+	position: absolute;
+	top:0;
+	width: 100%;
+} */
+nav{
+	position: sticky;
+	top: 0;
+	width: 100%;
+	/* border: 1px solid black; */
+	/* display: flex;
+	flex-direction: row; */
+	font-size: 1.5rem;
+	z-index: 1;
+}
+
+nav a{
+	text-decoration: none;
+	 color: black;
+}
+
+.burger {
+	right: 0;
+	margin-right: 20px;
+	margin-top: 10px;
+	position: absolute;
+}
+/* nav #logo{
+	text-decoration: none;
+	border: 1px solid red;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+} */
+
+
+nav #navItems  {	
+	background: orange;
+	border: 1px solid green;
+	width: 100%;
+	height: 100vh;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 5000px;
+	transition: 1.5s;
+	/*transition: all 1.5s linear;*/ 
+}
+
+.change .navItem {
+	opacity: 0;
+}
+
+/*@media only screen and (min-width: 960px){
+	nav .navItems {
+		font-size: 1.5rem;
+	}
+	nav #logo {
+		font-size: 3rem;
+	}
+}*/
+
+.burger {
+	display: inline-block;
+	cursor: pointer;
+	z-index: 1;
+  }
+  
+  .burger__bar1, .burger__bar2, .burger__bar3{
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+  }
+  
+  .change .burger__bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .burger__bar2 {opacity: 0;}
+  
+  .change .burger__bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+
 
 .pane {
+	
     height: 100vh;
 }
 
@@ -48,47 +142,3 @@ p {
     margin: 0;
     padding: 0;
 }
-nav{
-	width: 100%;
-	height: 8vh;
-	border: 1px solid black;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	font-size: 1.5rem;
-}
-
-nav a{
-	text-decoration: none;
-	 color: black;
-}
-
-
-nav #logo{
-	text-decoration: none;
-	border: 1px solid red;
-	width: 40%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-}
-
-
-nav #navItems {
-	border: 1px solid green;
-	width: 60%;
-	height: 100%;
-	text-decoration: none;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-/*@media only screen and (min-width: 960px){
-	nav .navItems {
-		font-size: 1.5rem;
-	}
-	nav #logo {
-		font-size: 3rem;
-	}
-}*/
