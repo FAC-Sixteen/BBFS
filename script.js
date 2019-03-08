@@ -1,13 +1,13 @@
 let changeClass = false;//<<<false because change class is not set to the element
 
 // Menu and contents
-let burgerMenu = document.querySelector('.burger');
-let navItems = document.getElementById('navItems');
+const burgerMenu = document.querySelector('.burger');
+const navItems = document.getElementById('navItems');
 
 
 // functions
 
-let myFunction = (x) => {
+const myFunction = (x) => {
 	console.log('inside function body');
 	if(!changeClass){//<<< this is when menu expands
 		changeClass = true;
