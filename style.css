@@ -4,7 +4,6 @@ html, body {
 	overflow-x: hidden;
 }
 
-
 /* Desktop Navbar */
 
 .desktopnav {
@@ -31,7 +30,7 @@ html, body {
   position: absolute;
   right: 25vw;
   margin-right: 10px;
-  font-size: 3rem;
+  font-size: 3vw;
   color: white;
 }
 
@@ -44,11 +43,12 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	align-items: center;
+	/* align-items: center; */
+	margin-left: 7vw;
 }
 
 .desktopNavLink {
-	font-size: 10vh;
+	font-size: 5vw;
 	text-decoration: none;
 }
 
@@ -90,12 +90,28 @@ html, body {
 		opacity: 0;
 	}
 
+/*
+	#mobTeam {
+		position: absolute;
+
+	}
+
+	#mobAbout {
+		position: absolute;
+		top: 20px;
+	}
+
+	#mobContact {
+		position: absolute;
+		bottom: 20px;
+	} */
+
 	.burger {
 		height: 100vh;
 		left: 0;
 		margin-left: 20px;
 		margin-top: 10px;
-		position: absolute;
+		position: fixed;
 		display: inline-block;
 		cursor: pointer;
 		z-index: 1;
@@ -130,7 +146,6 @@ html, body {
 		margin: 0 auto;
 		padding: 60vh 0vh 0vh 0vh;
 		font-size: 30vw;
-		height: 100vh;
 		overflow: hidden;
 		border-right: 5vw solid orange; /* The typwriter cursor */
 		white-space: nowrap; /* Keeps the content on a single line */
@@ -139,10 +154,10 @@ html, body {
 		animation:
 		typing 1.5s steps(20, end),
 		blink-caret 0.5s step-end infinite;
-		position: static;
+		height: 100vh;
 	}
 
-	h2 {
+	#spark {
 		font-size: 3vh;
 		position: absolute;
 		left: 15vw;
@@ -185,19 +200,21 @@ html, body {
 	animation: backgroundlight 1s;
 	animation-delay: 2s;
 	animation-fill-mode: forwards;
+	position: relative;
 
 }
 
 .pane__second {
-
-    background-color: #3b5f33;
+    background-color: #ffdcb4;
 }
 
 .pane__third {
-    background-color: pink;
-		border-right: 5vw solid orange;
-		background-clip: border-box;
-}
+	background-color: #3b5f33;
+    color: #ffdcb4;
+    display: flex;
+		justify-content:flex-end;
+  }
+
 
 /* Keyframe animations */
 
@@ -271,6 +288,117 @@ p {
     padding: 0;
 }
 
+
+
+/*Form*/
+
+fieldset{
+	width: 80%;
+	height: 90%;
+	margin: 0 auto;
+	margin-right: 5vw;
+}
+
+
+#contactUs{
+	font-size: 8vh;
+	letter-spacing: .10em;
+}
+
+.formContainer {
+	border: none;
+	margin: 0 auto;
+	align-items: center;
+	margin-top: 1vh;
+}
+
+.flexContainer {
+	position: relative;
+}
+
+/* .formCointainer__head{
+	line-height: 1.5;
+	border-bottom: 1px solid #ffdcb4;
+	padding-bottom: 10px;
+	width: 95%;
+	letter-spacing: .10em;
+	font-size: 1.2em;
+} */
+
+.labels {
+	font-size: 3vh;
+}
+
+
+::placeholder {
+	color: white;
+	opacity: 0;
+}
+
+
+form input {
+	width: 50vw;
+	height: 3vh;
+	background: transparent;
+	border: transparent;
+	border-bottom: 1px  dashed black;
+	color: #ffdcb4;
+	font-size: 2.5vh;
+	position: absolute;
+	right: 0;
+}
+
+/* #input--email {
+	font-size: 2vw;
+} */
+
+form input:active, form input:focus{
+	outline: none;
+	border-bottom: 1px  dashed #ffdcb4;
+}
+
+textarea {
+	background: transparent;
+	width: 98%;
+	color: #ffdcb4;
+	border-color: black;
+	resize: none;
+	margin-bottom: 2vh;
+	letter-spacing: .10em;
+	font-size: 1em;
+}
+
+#submitButton{
+	background-color: #ffdcb4;
+	color: #3b5f33;
+	font-weight: bolder;
+	font-size: 0.8em;
+	letter-spacing: .10em;
+	border-color: #ffdcb4;
+	display: block;
+	margin: auto;
+	padding: 15px 32px;
+}
+
+#submitButton:focus {
+  outline: none;
+}
+
+#submitButton:active{
+	border: solid darkorange 2px;
+  border-color: darkorange;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .scroll-wrapper {
   margin: 0;
   padding: 0;
@@ -281,8 +409,11 @@ p {
 	width: 99vw;
 	height: 100vh;
 	scroll-behavior: smooth;
+}
+
   .profile {
     flex: 0 0 auto;
+
 	}
 }
 
@@ -310,11 +441,13 @@ outline: 1px solid slategrey;
 	display: flex;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
 	.profile {
-			flex-flow: column;
-			width: 100vw;
+		display: grid;
+		grid-template-rows: 50vh;
 	}
+
+	.four
 }
 
 .photo {
@@ -342,8 +475,9 @@ outline: 1px solid slategrey;
 }
 
 .back-flip {
-  background-color: #183150;
-  color: white;
+  background-color: white;
+	color: #183150;
+	font-size: 5em;
   transform: rotateY(180deg);
 	z-index: 1;
 	display: flex;
@@ -358,9 +492,11 @@ outline: 1px solid slategrey;
 	height: 100vh;
   width: 50vw;
   margin: 0;
+	padding-top: 10%;
 	background-color: #183150;
 	color: white;
-  font-size: 10vw;
+  font-size: 3vw;
+	text-align: center;
 }
 
 #arrow {
@@ -382,27 +518,47 @@ outline: 1px solid slategrey;
 }
 
 #freddie {
-	background-image: url("https://avatars2.githubusercontent.com/u/40991816?s=400&v=4");
+
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #burhan {
-	background-image: url("https://avatars3.githubusercontent.com/u/42354400?s=400&v=4");
+
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #four-photos {
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: 2;
+	grid-template-rows: 2;
+}
+
+#photo1 {
+	grid-row: 1;
+	grid-column: 1;
+}
+
+#photo2 {
+	grid-row: 1;
+	grid-column: 2;
+}
+
+#photo3 {
+	grid-row: 2;
+	grid-column: 1;
+}
+
+#photo4 {
+	grid-row: 2;
+	grid-column: 2;
 }
 
 .one-photo {
 	margin: 0;
-	vertical-align: middle;
 	width: 100%;
-	height: 90%;
+	height: 100%;
 }
 
 .photo-flip{
@@ -417,18 +573,32 @@ outline: 1px solid slategrey;
 /* Desktop mode */
 @media only screen and (min-width: 700px){
 
-	/* Shift the headings up and make them smaller */
+	/* Shift the headings and change their sizes */
 
 	h1 {
 		padding: 50vh 0vh;
 		font-size: 15vw;
+		height: 10px;
 	}
 
-	h2 {
+	#spark {
 		font-size: 4vw;
 		position: absolute;
 		left: 10vh;
 		bottom: 0vh;
+	}
+
+	#contactUs{
+		font-size: 10vh;
+		margin-bottom: 0;
+	}
+
+	form input {
+		width: 60vw;
+	}
+
+	textarea {
+
 	}
 
 	/* Disable mobile Navbar */
@@ -439,5 +609,22 @@ outline: 1px solid slategrey;
 	/* Desktop Navbar */
 		.desktopnav {
 			display: block;
+		}
+
+		/* Change second and third pane widths  */
+		.pane__third {
+		  	width: 95vw;
+		  }
+		.pane__second {
+				width: 95vw;
+			}
+
+		/* Placeholder opacity */
+		::placeholder {
+				opacity: 100;
+			}
+
+
+
 		}
 }
