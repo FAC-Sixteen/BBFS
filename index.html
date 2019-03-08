@@ -165,7 +165,7 @@
     				<br><br><br>
 
     				<label class = "labels" for="email">Email:</label>
-    				<input type="text" name="Email" class = "input" id = "input--email" placeholder="e.g. erikabrown@outlook.com" required>
+    				<input type="text" name="Email" class = "input" id = "input--email" placeholder="e.g. erikabrown@outlook.com" pattern="[-.\w]+@([\w-]+\.)+[\w-]{2,20}" required>
 
     				<br><br><br>
 
@@ -173,7 +173,7 @@
     				<br><br>
     				<textarea rows="8" cols="50"></textarea>
 
-    				<button id="submitButton" type="">Submit</button>
+    				<button id="submitButton" type="submit">Submit</button>
     			</form>
 
 
