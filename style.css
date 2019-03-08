@@ -536,9 +536,11 @@ p {
 }
 }
 
-/* .scroll-wrapper::-webkit-scrollbar {
+
+
+.scroll-wrapper::-webkit-scrollbar {
   display: none;
-} */
+}
 
 .scroll-wrapper::-webkit-scrollbar {
 	width: 1em;
@@ -551,7 +553,14 @@ p {
 
 .scroll-wrapper::-webkit-scrollbar-thumb {
 	background-color: orange;
+	border-radius: 200px;
 	outline: 1px solid slategrey;
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#aboutus:hover {
+	cursor:url("images/arrow.png"), auto;
+	/* cursor: progress; */
 }
 
 .profile {
