@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="bulbicon.png">
@@ -11,17 +12,19 @@
   <body>
     <nav class = "desktopnav">
       <div class="desktopSlide" aria-label="Burger menu button">
+
         <div class="desktopBurger">&#9776;</div>
-          <div class="desktopNavItems">
-                <a href="#second-pane" class="desktopNavLink">About</a>
+        <div class="desktopNavItems">
+          <a href="#aboutus" class="desktopNavLink">About</a>
 
-                <a href="#second-pane" class="desktopNavLink">Team</a>
+          <a href="#banna" class="desktopNavLink">Team</a>
 
-                <a href="#third-pane" class="desktopNavLink">Contact</a>
-          </div>
+          <a href="#third-pane" class="desktopNavLink">Contact</a>
         </div>
       </div>
     </nav>
+
+  </header>
 
     <nav class = "mobilenav">
           <div class="burger" aria-label="Burger menu button">
@@ -29,46 +32,49 @@
             <div class="burger__bar2"></div>
             <div class="burger__bar3"></div>
           </div>
-    <div id="navItems">
-          <a href="#second-pane" class="navItem" id = "mobAbout" aria-label="About button">About</a>
-          <br><br>
-          <a href="#second-pane" class="navItem" id = "mobTeam" aria-label="Team button">Team</a>
-          <br><br>
-          <a href="#third-pane" class="navItem" id = "mobContact" aria-label="Contact us button">Contact us</a>
-        </div>
-    </nav>
 
-    <main>
+    <div id="navItems">
+
+      <a href="#aboutus" class="navItem" id="mobAbout" aria-label="About button">About</a>
+      <br><br>
+      <a href="#banna" class="navItem" id="mobTeam" aria-label="Team button">Team</a>
+      <br><br>
+      <a href="#third-pane" class="navItem" id="mobContact" aria-label="Contact us button">Contact us</a>
+    </div>
+  </nav>
+
+  <main>
 
     <section class="pane pane__first">
 
       <audio controls autoplay hidden>
-        <source src="flickeringlight.mp3" type="audio/mpeg">
+        <source src="audio/flickeringlight.mp3" type="audio/mpeg">
       </audio>
-      <img class= "bulbon" src = "bulbon.png" alt = "lightbulb turned on">
-      <img class= "bulboff" src = "bulboff.png" alt = "lightbulb turned off">
+      <img class="bulbon" src="images/bulbon.png" alt="lightbulb turned on">
+      <img class="bulboff" src="images/bulboff.png" alt="lightbulb turned off">
 
       <h1>&nbsp;bulb</h1>
-      <h2 id = "spark">Here to spark your ideas.</h2>
+      <h2 id="spark">Here to spark your ideas.</h2>
 
     <div>
     </section>
-    <section class = "pane__second" id = "second-pane">
+    <section class="pane__second" id="second-pane">
 
       <!-- <img id="arrow" src="down-arrow.png"> -->
 
-        <section id="container">
+      <section id="container">
 
         <section class="scroll-wrapper">
+
             <div class="profile">
                 <div class="bio">
                     &nbsp; We are bulb, a not-for-profit organisation run by the community, for the community. We help you build your software, and ask for nothing in return. <br> &nbsp; &#8594;
                 </div>
                 <div class="photo" id="four-photos">
-                    <a href = "#banna" id = "photo1"><img class="one-photo" src="bantek89.jpeg" alt="Image of Bana"></a>
-                    <a href = "#burhan" id = "photo2"><img class="one-photo" src="Baalwaan.jpeg" alt="Image of Burhan"></a>
-                    <a href = "#freddie" id = "photo3"><img class="one-photo" src="Fweddi.png" alt="Image of Fweddi"></a>
-                    <a href = "#sylvia" id = "photo4"><img  class="one-photo" src="seabasshoang.jpeg" alt="Image of Sylvia"></a>
+                    <a href = "#banna" id = "photo1"><img class="one-photo" src="./images/bantek89.jpeg" alt="Image of Bana"></a>
+                    <a href = "#burhan" id = "photo2"><img class="one-photo" src="./images/Baalwaan.jpeg" alt="Image of Burhan"></a>
+                    <a href = "#freddie" id = "photo3"><img class="one-photo" src="./images/Fweddi.png" alt="Image of Fweddi"></a>
+                    <a href = "#sylvia" id = "photo4"><img  class="one-photo" src="./images/seabasshoang.jpeg" alt="Image of Sylvia"></a>
                 </div>
                 <div class="bio">
                     &nbsp; hi, <br> &nbsp; I'm Banna
@@ -76,7 +82,7 @@
                 <div id="banna" class="photo">
                   <div class="photo-flip">
                   <div class="front-flip">
-                    <img style="width:100%" src="bantek89.jpeg" alt="Image of Bana">
+                    <img style="width:100%" src="./images/bantek89.jpeg" alt="Image of Bana">
                   </div>
                   <div class="back-flip">
                       <p>Banna's info</p>
@@ -91,14 +97,16 @@
                 <section id="burhan" class="photo">
                     <div class="photo-flip">
                         <div class="front-flip">
-                          <img style="width:100%" src="baalwaan.jpeg" alt="Image of Burhan">
+                          <img style="width:100%" src="./images/baalwaan.jpeg" alt="Image of Burhan">
                         </div>
                         <div class="back-flip">
                             <p>Burhan's info</p>
                           </div>
                         </div>
                 </section>
+
             </section>
+
             <section class="profile">
                 <section class="bio">
                     &nbsp; hi, <br> &nbsp; I'm Freddie
@@ -106,14 +114,16 @@
                 <section id="freddie" class="photo">
                     <div class="photo-flip">
                         <div class="front-flip">
-                          <img style="width:100%" src="Fweddi.png" alt="Image of Fweddi">
+                          <img style="width:100%" src="./images/Fweddi.png" alt="Image of Fweddi">
                         </div>
                         <div class="back-flip">
                             <p>Freddie's info</p>
                           </div>
                         </div>
                 </section>
+
             </section>
+
             <section class="profile">
                 <section class="bio">
                     &nbsp; hi, <br> &nbsp; I'm Sylvia
@@ -121,70 +131,74 @@
                 <section id="sylvia" class="photo">
                     <div class="photo-flip">
                         <div class="front-flip">
-                          <img style="width:100%" src="seabasshoang.jpeg" alt="Image of Sylvia">
+                          <img style="width:100%" src="./images/seabasshoang.jpeg" alt="Image of Sylvia">
                         </div>
                         <div class="back-flip">
                             <p>Sylvia's info</p>
                           </div>
                         </div>
                 </section>
-            </section>
-          </section>
 
     </section>
-    <!-- <div id="arrow"><p id="arrow-symbol">&#8594</p></div> -->
+  </section>
+
 </div>
 
 
-    <section class="pane pane__third" id = "third-pane">
+      <section class="pane pane__third" id="third-pane">
 
-    	<fieldset class="formContainer">
-    		<legend>
-    			<h2 id="contactUs">contact us</h2>
-    		</legend>
+        <fieldset class="formContainer">
+          <legend>
+            <h2 id="contactUs">contact us</h2>
+          </legend>
 
 
-    			<!-- <div class="formCointainer__head">
+          <!-- <div class="formCointainer__head">
     				<p>
     					Why not tell us a bit about your idea. We'll get in touch with you and plan our next steps together.
     				</p>
     			</div> -->
 
-				<br><br>
+          <br><br>
 
-    			<form class = "flexContainer">
+          <form class="flexContainer">
 
     				<label class = "labels" for="Name">Name:</label>
     				<input type="text" name="name" id="Name" placeholder="e.g. Erika Brown" aria-label="Name input field" required>
 
-					  <br><br><br>
+
+            <br><br><br>
+
 
 					  <label class = "labels" for="Company">Company:</label>
     				<input type="text" name="name" id="Company" placeholder="e.g. Founders and Coders" aria-label="Company name input field" required>
 
-    				<br><br><br>
+
+            <br><br><br>
 
     				<label class = "labels" for="Email">Email:</label>
     				<input type="text" name="Email" id = "Email input--email" placeholder="e.g. erikabrown@outlook.com" aria-label="Email input field" pattern="[-.\w]+@([\w-]+\.)+[\w-]{2,20}" required>
 
-    				<br><br><br>
+            <br><br><br>
+
 
     				<label class = "labels" for="Message">Message:</label>
     				<br><br>
     				<textarea rows="8" cols="50" id= "Message" aria-label="Message input area"></textarea>
+
 
     				<button id="submitButton" type="submit" aria-label="Form submit button">Submit</button>
     			</form>
 
 
 
-    	</fieldset>
+        </fieldset>
 
-    </section>
+      </section>
 
   </main>
 
-<script type="text/javascript" src='script.js'></script>
-  </body>
+  <script type="text/javascript" src='script.js'></script>
+</body>
 
 </html>
