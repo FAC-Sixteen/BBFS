@@ -1,192 +1,195 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" href="bulbicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bulb</title>
-  </head>
-  <body>
-    <header>
-    <nav class = "desktopnav">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="bulbicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bulb</title>
+</head>
+
+<body>
+  <header>
+    <nav class="desktopnav">
       <div class="desktopSlide">
         <div class="desktopBurger">&#9776;</div>
-          <div class="desktopNavItems">
-                <a href="#aboutus" class="desktopNavLink">About</a>
+        <div class="desktopNavItems">
+          <a href="#aboutus" class="desktopNavLink">About</a>
 
-                <a href="#banna" class="desktopNavLink">Team</a>
+          <a href="#banna" class="desktopNavLink">Team</a>
 
-                <a href="#third-pane" class="desktopNavLink">Contact</a>
-          </div>
+          <a href="#third-pane" class="desktopNavLink">Contact</a>
         </div>
       </div>
     </nav>
   </header>
 
-    <nav class = "mobilenav">
-          <div class="burger">
-            <div class="burger__bar1"></div>
-            <div class="burger__bar2"></div>
-            <div class="burger__bar3"></div>
-          </div>
+  <nav class="mobilenav">
+    <div class="burger">
+      <div class="burger__bar1"></div>
+      <div class="burger__bar2"></div>
+      <div class="burger__bar3"></div>
+    </div>
     <div id="navItems">
-          <a href="#aboutus" class="navItem" id = "mobAbout">About</a>
-          <br><br>
-          <a href="#banna" class="navItem" id = "mobTeam">Team</a>
-          <br><br>
-          <a href="#third-pane" class="navItem" id = "mobContact">Contact us</a>
-        </div>
-    </nav>
+      <a href="#aboutus" class="navItem" id="mobAbout">About</a>
+      <br><br>
+      <a href="#banna" class="navItem" id="mobTeam">Team</a>
+      <br><br>
+      <a href="#third-pane" class="navItem" id="mobContact">Contact us</a>
+    </div>
+  </nav>
 
-    <main>
+  <main>
 
     <section class="pane pane__first">
 
       <audio controls autoplay hidden>
-        <source src="flickeringlight.mp3" type="audio/mpeg">
+        <source src="audio/flickeringlight.mp3" type="audio/mpeg">
       </audio>
-      <img class= "bulbon" src = "bulbon.png" alt = "lightbulb turned on">
-      <img class= "bulboff" src = "bulboff.png" alt = "lightbulb turned off">
+      <img class="bulbon" src="images/bulbon.png" alt="lightbulb turned on">
+      <img class="bulboff" src="images/bulboff.png" alt="lightbulb turned off">
 
       <h1>&nbsp;bulb</h1>
-      <h2 id = "spark">Here to spark your ideas.</h2>
+      <h2 id="spark">Here to spark your ideas.</h2>
 
 
     </section>
-    <section class = "pane__second" id = "second-pane">
+    <section class="pane__second" id="second-pane">
 
       <!-- <img id="arrow" src="down-arrow.png"> -->
 
-        <section id="container">
+      <section id="container">
 
         <section class="scroll-wrapper">
-            <section class="profile">
-                <section id = "aboutus" class="bio">
-                    &nbsp; We are bulb, a not-for-profit organisation run by the community, for the community. We help you build your software, and ask for nothing in return. <br> &nbsp; &#8594;
-                </section>
-                <section class="photo" id="four-photos">
-                    <a href = "#banna" id = "photo1"><img class="one-photo" src="bantek89.jpeg"></a>
-                    <a href = "#burhan" id = "photo2"><img class="one-photo" src="baalwaan.jpeg"></a>
-                    <a href = "#freddie" id = "photo3"><img class="one-photo" src="Fweddi.png"></a>
-                    <a href = "#sylvia" id = "photo4"><img  class="one-photo" src="seabasshoang.jpeg"></a>
-                </section>
-                <section class="bio">
-                    &nbsp; hi, <br> &nbsp; I'm Banna
-                </section>
-                <section id="banna" class="photo">
-                  <div class="photo-flip">
-                  <div class="front-flip">
-                    <img style="width:100%" src="bantek89.jpeg">
-                  </div>
-                  <div class="back-flip">
-                      <p>Banna's info</p>
-                    </div>
-                  </div>
-                </section>
+          <section class="profile">
+            <section id="aboutus" class="bio">
+              &nbsp; We are bulb, a not-for-profit organisation run by the community, for the community. We help you
+              build your software, and ask for nothing in return. <br> &nbsp; &#8594;
             </section>
-            <section class="profile">
-                <section class="bio">
-                    &nbsp; hi, <br> &nbsp; I'm Burhan
-                </section>
-                <section id="burhan" class="photo">
-                    <div class="photo-flip">
-                        <div class="front-flip">
-                          <img style="width:100%" src="baalwaan.jpeg">
-                        </div>
-                        <div class="back-flip">
-                            <p>Burhan's info</p>
-                          </div>
-                        </div>
-                </section>
+            <section class="photo" id="four-photos">
+              <a href="#banna" id="photo1"><img class="one-photo" src="images/bantek89.jpeg"></a>
+              <a href="#burhan" id="photo2"><img class="one-photo" src="images/baalwaan.jpeg"></a>
+              <a href="#freddie" id="photo3"><img class="one-photo" src="images/Fweddi.png"></a>
+              <a href="#sylvia" id="photo4"><img class="one-photo" src="images/seabasshoang.jpeg"></a>
             </section>
-            <section class="profile">
-                <section class="bio">
-                    &nbsp; hi, <br> &nbsp; I'm Freddie
-                </section>
-                <section id="freddie" class="photo">
-                    <div class="photo-flip">
-                        <div class="front-flip">
-                          <img style="width:100%" src="Fweddi.png">
-                        </div>
-                        <div class="back-flip">
-                            <p>Freddie's info</p>
-                          </div>
-                        </div>
-                </section>
+            <section class="bio">
+              &nbsp; hi, <br> &nbsp; I'm Banna
             </section>
-            <section class="profile">
-                <section class="bio">
-                    &nbsp; hi, <br> &nbsp; I'm Sylvia
-                </section>
-                <section id="sylvia" class="photo">
-                    <div class="photo-flip">
-                        <div class="front-flip">
-                          <img style="width:100%" src="seabasshoang.jpeg">
-                        </div>
-                        <div class="back-flip">
-                            <p>Sylvia's info</p>
-                          </div>
-                        </div>
-                </section>
+            <section id="banna" class="photo">
+              <div class="photo-flip">
+                <div class="front-flip">
+                  <img style="width:100%" src="images/bantek89.jpeg">
+                </div>
+                <div class="back-flip">
+                  <p>Banna's info</p>
+                </div>
+              </div>
             </section>
           </section>
+          <section class="profile">
+            <section class="bio">
+              &nbsp; hi, <br> &nbsp; I'm Burhan
+            </section>
+            <section id="burhan" class="photo">
+              <div class="photo-flip">
+                <div class="front-flip">
+                  <img style="width:100%" src="images/baalwaan.jpeg">
+                </div>
+                <div class="back-flip">
+                  <p>Burhan's info</p>
+                </div>
+              </div>
+            </section>
+          </section>
+          <section class="profile">
+            <section class="bio">
+              &nbsp; hi, <br> &nbsp; I'm Freddie
+            </section>
+            <section id="freddie" class="photo">
+              <div class="photo-flip">
+                <div class="front-flip">
+                  <img style="width:100%" src="images/Fweddi.png">
+                </div>
+                <div class="back-flip">
+                  <p>Freddie's info</p>
+                </div>
+              </div>
+            </section>
+          </section>
+          <section class="profile">
+            <section class="bio">
+              &nbsp; hi, <br> &nbsp; I'm Sylvia
+            </section>
+            <section id="sylvia" class="photo">
+              <div class="photo-flip">
+                <div class="front-flip">
+                  <img style="width:100%" src="images/seabasshoang.jpeg">
+                </div>
+                <div class="back-flip">
+                  <p>Sylvia's info</p>
+                </div>
+              </div>
+            </section>
+          </section>
+        </section>
 
-    </section>
-    <!-- <div id="arrow"><p id="arrow-symbol">&#8594</p></div> -->
+      </section>
+      <!-- <div id="arrow"><p id="arrow-symbol">&#8594</p></div> -->
 
 
 
-    <section class="pane pane__third" id = "third-pane">
+      <section class="pane pane__third" id="third-pane">
 
-    	<fieldset class="formContainer">
-    		<legend>
-    			<h2 id="contactUs">contact us</h2>
-    		</legend>
+        <fieldset class="formContainer">
+          <legend>
+            <h2 id="contactUs">contact us</h2>
+          </legend>
 
 
-    			<!-- <div class="formCointainer__head">
+          <!-- <div class="formCointainer__head">
     				<p>
     					Why not tell us a bit about your idea. We'll get in touch with you and plan our next steps together.
     				</p>
     			</div> -->
 
-				<br><br>
+          <br><br>
 
-    			<form class = "flexContainer">
+          <form class="flexContainer">
 
-    				<label class = "labels" for="name">Name:</label>
-    				<input type="text" name="name" class = "input" placeholder="e.g. Erika Brown" required>
+            <label class="labels" for="name">Name:</label>
+            <input type="text" name="name" class="input" placeholder="e.g. Erika Brown" required>
 
-					  <br><br><br>
+            <br><br><br>
 
-					  <label class = "labels" for="Company">Company:</label>
-    				<input type="text" name="name" class = "input" placeholder="e.g. Founders and Coders" required>
+            <label class="labels" for="Company">Company:</label>
+            <input type="text" name="name" class="input" placeholder="e.g. Founders and Coders" required>
 
-    				<br><br><br>
+            <br><br><br>
 
-    				<label class = "labels" for="email">Email:</label>
-    				<input type="text" name="Email" class = "input" id = "input--email" placeholder="e.g. erikabrown@outlook.com" required>
+            <label class="labels" for="email">Email:</label>
+            <input type="text" name="Email" class="input" id="input--email" placeholder="e.g. erikabrown@outlook.com"
+              required>
 
-    				<br><br><br>
+            <br><br><br>
 
-    				<label class = "labels" for="message">Message:</label>
-    				<br><br>
-    				<textarea rows="8" cols="50"></textarea>
+            <label class="labels" for="message">Message:</label>
+            <br><br>
+            <textarea rows="8" cols="50"></textarea>
 
-    				<button id="submitButton" type="">Submit</button>
-    			</form>
+            <button id="submitButton" type="">Submit</button>
+          </form>
 
 
 
-    	</fieldset>
+        </fieldset>
 
-    </section>
+      </section>
 
   </main>
 
-<script type="text/javascript" src='script.js'></script>
-  </body>
+  <script type="text/javascript" src='script.js'></script>
+</body>
 
 </html>
