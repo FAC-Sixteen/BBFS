@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="bulbicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bulb</title>
@@ -16,7 +17,7 @@
 
                 <a href="#" class="desktopNavLink">Team</a>
 
-                <a href="#" class="desktopNavLink">Contact us</a>
+                <a href="#" class="desktopNavLink">Contact</a>
           </div>
         </div>
       </div>
@@ -29,11 +30,11 @@
             <div class="burger__bar3"></div>
           </div>
     <div id="navItems">
-          <a href="" class="navItem">About</a>
+          <a href="" class="navItem" id = "mobAbout">About</a>
           <br><br>
-          <a href="" class="navItem">Team</a>
+          <a href="" class="navItem" id = "mobTeam">Team</a>
           <br><br>
-          <a href="" class="navItem">Contact us</a>
+          <a href="" class="navItem" id = "mobContact">Contact us</a>
         </div>
     </nav>
 
@@ -55,9 +56,9 @@
     <section class="pane pane__second">
 
       <!-- <img id="arrow" src="down-arrow.png"> -->
-      
+
         <section id="container">
-          
+
         <section class="scroll-wrapper">
             <section class="profile">
                 <section class="bio">
@@ -129,7 +130,7 @@
                 </section>
             </section>
           </section>
-     
+
     </section>
     <!-- <div id="arrow"><p id="arrow-symbol">&#8594</p></div> -->
 
@@ -139,50 +140,46 @@
 
     	<fieldset class="formContainer">
     		<legend>
-    			<h2 id="contactUs">Contact Us</h2>
+    			<h2 id="contactUs">contact us</h2>
     		</legend>
 
 
-    			<div class="formCointainer__head">
+    			<!-- <div class="formCointainer__head">
     				<p>
     					Why not tell us a bit about your idea. We'll get in touch with you and plan our next steps together.
     				</p>
-    			</div>
+    			</div> -->
 
 				<br><br>
 
-    			<form>
+    			<form class = "flexContainer">
 
-    				<label for="name">Name</label>
-    				<br><br>
-    				<input type="text" name="name" id="name" placeholder="Your Name..." required>
+    				<label class = "labels" for="name">Name:</label>
+    				<input type="text" name="name" class = "input" placeholder="e.g. Erika Brown" required>
 
-					<br><br>
+					  <br><br><br>
 
-					<label for="Company">Company</label>
-    				<br><br>
-    				<input type="text" name="name" id="company" placeholder="Your Company..." required>	  				
-
-    				<br><br>
-
-
-    				<label for="email">Email</label>
-    				<br><br>
-    				<input type="text" name="Email" id="email" placeholder="Your Email..." required>
+					  <label class = "labels" for="Company">Company:</label>
+    				<input type="text" name="name" class = "input" placeholder="e.g. Founders and Coders" required>
 
     				<br><br><br>
 
-    				<label for="message">Message</label>
+    				<label class = "labels" for="email">Email:</label>
+    				<input type="text" name="Email" class = "input" id = "input--email" placeholder="e.g. erikabrown@outlook.com" required>
+
+    				<br><br><br>
+
+    				<label class = "labels" for="message">Message:</label>
     				<br><br>
-    				<textarea rows="4" cols="50" placeholder="Your Message..."></textarea>
+    				<textarea rows="8" cols="50"></textarea>
 
     				<button id="submitButton" type="">Submit</button>
     			</form>
-    		
- 
+
+
 
     	</fieldset>
-    	
+
     </section>
 
   </main>

@@ -44,12 +44,12 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	align-items: center;
-	margin-left: 10vw;
+	/* align-items: center; */
+	margin-left: 7vw;
 }
 
 .desktopNavLink {
-	font-size: 10vh;
+	font-size: 5vw;
 	text-decoration: none;
 }
 
@@ -91,12 +91,28 @@ html, body {
 		opacity: 0;
 	}
 
+/*
+	#mobTeam {
+		position: absolute;
+
+	}
+
+	#mobAbout {
+		position: absolute;
+		top: 20px;
+	}
+
+	#mobContact {
+		position: absolute;
+		bottom: 20px;
+	} */
+
 	.burger {
 		height: 100vh;
 		left: 0;
 		margin-left: 20px;
 		margin-top: 10px;
-		position: absolute;
+		position: fixed;
 		display: inline-block;
 		cursor: pointer;
 		z-index: 1;
@@ -131,7 +147,7 @@ html, body {
 		margin: 0 auto;
 		padding: 60vh 0vh 0vh 0vh;
 		font-size: 30vw;
-		height: 100vh;
+		height: 240vh;
 		overflow: hidden;
 		border-right: 5vw solid orange; /* The typwriter cursor */
 		white-space: nowrap; /* Keeps the content on a single line */
@@ -199,9 +215,7 @@ html, body {
 	background-color: #3b5f33;
     color: #ffdcb4;
     display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 95vw;
+		justify-content:flex-end;
   }
 
 
@@ -279,10 +293,10 @@ p {
 
 
 
-/*form*/
+/*Form*/
 
 fieldset{
-	width:80%;
+	width: 80%;
 	height: 90%;
 	margin: 0 auto;
 	margin-right: 5vw;
@@ -290,46 +304,79 @@ fieldset{
 
 
 #contactUs{
-	font-size: 3vh;
+	font-size: 8vh;
+	letter-spacing: .10em;
 }
 
-.formCointainer__head{
+.formContainer {
+	border: none;
+	margin: 0 auto;
+	align-items: center;
+	margin-top: 1vh;
+}
+
+.flexContainer {
+	position: relative;
+}
+
+/* .formCointainer__head{
 	line-height: 1.5;
 	border-bottom: 1px solid #ffdcb4;
 	padding-bottom: 10px;
-	width: 80%;
+	width: 95%;
+	letter-spacing: .10em;
+	font-size: 1.2em;
+} */
+
+.labels {
+	font-size: 3vh;
 }
 
 
-form input{
-	width: 80%;
+::placeholder {
+	color: white;
+	opacity: 0;
+}
+
+
+form input {
+	width: 50vw;
 	height: 3vh;
 	background: transparent;
 	border: transparent;
 	border-bottom: 1px  dashed black;
-	color: #ffdcb4; 
+	color: #ffdcb4;
+	font-size: 2.5vh;
+	position: absolute;
+	right: 0;
 }
+
+/* #input--email {
+	font-size: 2vw;
+} */
 
 form input:active, form input:focus{
 	outline: none;
 	border-bottom: 1px  dashed #ffdcb4;
 }
 
-textarea{
+textarea {
 	background: transparent;
-	width: 80%;
+	width: 98%;
 	color: #ffdcb4;
 	border-color: black;
-	border-radius: 5%;
 	resize: none;
-	margin-bottom: 50px;
+	margin-bottom: 2vh;
+	letter-spacing: .10em;
+	font-size: 1em;
 }
 
 #submitButton{
 	background-color: #ffdcb4;
 	color: #3b5f33;
 	font-weight: bolder;
-	font-size: 1.5vh;
+	font-size: 0.8em;
+	letter-spacing: .10em;
 	border-color: #ffdcb4;
 	display: block;
 	margin: auto;
@@ -342,7 +389,7 @@ textarea{
 
 #submitButton:active{
 	border: solid darkorange 2px;
-  	border-color: darkorange;
+  border-color: darkorange;
 }
 
 
@@ -368,6 +415,7 @@ textarea{
 .scroll-wrapper::-webkit-scrollbar {
 	width: 1em;
 	height: 3vh;
+	background-color: #3b5f33;
 }
 .scroll-wrapper::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -466,7 +514,7 @@ outline: 1px solid slategrey;
 }
 
 #burhan {
-	
+
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -495,11 +543,13 @@ outline: 1px solid slategrey;
 /* Desktop mode */
 @media only screen and (min-width: 700px){
 
-	/* Shift the headings up and make them smaller */
+	/* Shift the headings and change their sizes */
 
 	h1 {
 		padding: 50vh 0vh;
 		font-size: 15vw;
+
+		height: 200vh;
 	}
 
 	#spark {
@@ -507,6 +557,19 @@ outline: 1px solid slategrey;
 		position: absolute;
 		left: 10vh;
 		bottom: 0vh;
+	}
+
+	#contactUs{
+		font-size: 10vh;
+		margin-bottom: 0;
+	}
+
+	form input {
+		width: 60vw;
+	}
+
+	textarea {
+
 	}
 
 	/* Disable mobile Navbar */
@@ -517,5 +580,22 @@ outline: 1px solid slategrey;
 	/* Desktop Navbar */
 		.desktopnav {
 			display: block;
+		}
+
+		/* Change second and third pane widths  */
+		.pane__third {
+		  	width: 95vw;
+		  }
+		.pane__second {
+				width: 95vw;
+			}
+
+		/* Placeholder opacity */
+		::placeholder {
+				opacity: 100;
+			}
+
+
+
 		}
 }
