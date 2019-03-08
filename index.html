@@ -10,7 +10,7 @@
   </head>
   <body>
     <nav class = "desktopnav">
-      <div class="desktopSlide">
+      <div class="desktopSlide" aria-label="Burger menu button">
         <div class="desktopBurger">&#9776;</div>
           <div class="desktopNavItems">
                 <a href="#second-pane" class="desktopNavLink">About</a>
@@ -24,17 +24,17 @@
     </nav>
 
     <nav class = "mobilenav">
-          <div class="burger">
+          <div class="burger" aria-label="Burger menu button">
             <div class="burger__bar1"></div>
             <div class="burger__bar2"></div>
             <div class="burger__bar3"></div>
           </div>
     <div id="navItems">
-          <a href="#second-pane" class="navItem" id = "mobAbout">About</a>
+          <a href="#second-pane" class="navItem" id = "mobAbout" aria-label="About button">About</a>
           <br><br>
-          <a href="#second-pane" class="navItem" id = "mobTeam">Team</a>
+          <a href="#second-pane" class="navItem" id = "mobTeam" aria-label="Team button">Team</a>
           <br><br>
-          <a href="#third-pane" class="navItem" id = "mobContact">Contact us</a>
+          <a href="#third-pane" class="navItem" id = "mobContact" aria-label="Contact us button">Contact us</a>
         </div>
     </nav>
 
@@ -65,10 +65,10 @@
                     &nbsp; We are bulb, a not-for-profit organisation run by the community, for the community. We help you build your software, and ask for nothing in return. <br> &nbsp; &#8594;
                 </section>
                 <section class="photo" id="four-photos">
-                    <a href = "#banna" id = "photo1"><img class="one-photo" src="bantek89.jpeg"></a>
-                    <a href = "#burhan" id = "photo2"><img class="one-photo" src="Baalwaan.jpeg"></a>
-                    <a href = "#freddie" id = "photo3"><img class="one-photo" src="Fweddi.png"></a>
-                    <a href = "#sylvia" id = "photo4"><img  class="one-photo" src="seabasshoang.jpeg"></a>
+                    <a href = "#banna" id = "photo1"><img class="one-photo" src="bantek89.jpeg" alt="Image of Bana"></a>
+                    <a href = "#burhan" id = "photo2"><img class="one-photo" src="Baalwaan.jpeg" alt="Image of Burhan"></a>
+                    <a href = "#freddie" id = "photo3"><img class="one-photo" src="Fweddi.png" alt="Image of Fweddi"></a>
+                    <a href = "#sylvia" id = "photo4"><img  class="one-photo" src="seabasshoang.jpeg" alt="Image of Sylvia"></a>
                 </section>
                 <section class="bio">
                     &nbsp; hi, <br> &nbsp; I'm Banna
@@ -76,7 +76,7 @@
                 <section id="banna" class="photo">
                   <div class="photo-flip">
                   <div class="front-flip">
-                    <img style="width:100%" src="bantek89.jpeg">
+                    <img style="width:100%" src="bantek89.jpeg" alt="Image of Bana">
                   </div>
                   <div class="back-flip">
                       <p>Banna's info</p>
@@ -91,7 +91,7 @@
                 <section id="burhan" class="photo">
                     <div class="photo-flip">
                         <div class="front-flip">
-                          <img style="width:100%" src="baalwaan.jpeg">
+                          <img style="width:100%" src="baalwaan.jpeg" alt="Image of Burhan">
                         </div>
                         <div class="back-flip">
                             <p>Burhan's info</p>
@@ -106,7 +106,7 @@
                 <section id="freddie" class="photo">
                     <div class="photo-flip">
                         <div class="front-flip">
-                          <img style="width:100%" src="Fweddi.png">
+                          <img style="width:100%" src="Fweddi.png" alt="Image of Fweddi">
                         </div>
                         <div class="back-flip">
                             <p>Freddie's info</p>
@@ -121,7 +121,7 @@
                 <section id="sylvia" class="photo">
                     <div class="photo-flip">
                         <div class="front-flip">
-                          <img style="width:100%" src="seabasshoang.jpeg">
+                          <img style="width:100%" src="seabasshoang.jpeg" alt="Image of Sylvia">
                         </div>
                         <div class="back-flip">
                             <p>Sylvia's info</p>
@@ -154,26 +154,26 @@
 
     			<form class = "flexContainer">
 
-    				<label class = "labels" for="name">Name:</label>
-    				<input type="text" name="name" class = "input" placeholder="e.g. Erika Brown" required>
+    				<label class = "labels" for="Name">Name:</label>
+    				<input type="text" name="name" id="Name" placeholder="e.g. Erika Brown" aria-label="Name input field" required>
 
 					  <br><br><br>
 
 					  <label class = "labels" for="Company">Company:</label>
-    				<input type="text" name="name" class = "input" placeholder="e.g. Founders and Coders" required>
+    				<input type="text" name="name" id="Company" placeholder="e.g. Founders and Coders" aria-label="Company name input field" required>
 
     				<br><br><br>
 
-    				<label class = "labels" for="email">Email:</label>
-    				<input type="text" name="Email" class = "input" id = "input--email" placeholder="e.g. erikabrown@outlook.com" pattern="[-.\w]+@([\w-]+\.)+[\w-]{2,20}" required>
+    				<label class = "labels" for="Email">Email:</label>
+    				<input type="text" name="Email" id = "Email input--email" placeholder="e.g. erikabrown@outlook.com" aria-label="Email input field" pattern="[-.\w]+@([\w-]+\.)+[\w-]{2,20}" required>
 
     				<br><br><br>
 
-    				<label class = "labels" for="message">Message:</label>
+    				<label class = "labels" for="Message">Message:</label>
     				<br><br>
-    				<textarea rows="8" cols="50"></textarea>
+    				<textarea rows="8" cols="50" id="Message" aria-label="Message input area"></textarea>
 
-    				<button id="submitButton" type="submit">Submit</button>
+    				<button id="submitButton" type="submit" aria-label="Form submit button">Submit</button>
     			</form>
 
 
